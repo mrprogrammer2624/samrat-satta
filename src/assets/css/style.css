@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  /* background-color: black; */
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center w-full text-center text-xl gap-3 font-medium leading-5 capitalize py-4 px-8 rounded-xl transition-all ease-in-out duration-150 disabled:text-gray-75 disabled:pointer-events-none;
@@ -25,7 +30,7 @@
   }
 
   .container {
-    @apply max-w-[375px] mx-auto px-4;
+    @apply max-w-[375px] mx-auto px-[15px];
   }
 
   .link-primary {
@@ -73,5 +78,13 @@
   p,
   .p {
     @apply text-base;
+  }
+
+  a {
+    @apply font-normal p text-gray-75 hover:text-primary
+  }
+
+  a.active {
+    @apply text-primary
   }
 }
