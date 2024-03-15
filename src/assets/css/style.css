@@ -88,3 +88,7 @@
     @apply text-primary
   }
 }
+
+.scrollbarNone::-webkit-scrollbar{
+  display: none;
+}

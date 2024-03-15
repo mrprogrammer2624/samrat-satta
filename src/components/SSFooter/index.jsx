@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Container } from "../Container";
 import clsx from "clsx";
-import { FooterContent } from "../../utils/";
+import { FooterContent } from "../../constants/";
 
 export const SSFooter = () => {
   return (

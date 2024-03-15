@@ -3,6 +3,9 @@ import RootLayout from "../layout/RootLayout";
 import Login from "../pages/Login";
 import StyleSheets from "../pages/styleSheets";
 import Mpin from "../pages/Mpin";
+import PageLayout from "../layout/PageLayout";
+import BankDetails from "../pages/BankDetails";
+import NotificationHistory from "../pages/NotificationHistory";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,27 @@ const router = createBrowserRouter([
         id: "",
         name: "",
         element: "",
+        children: false,
+      },
+    ],
+  },
+  {
+    id: "PageLayout",
+    name: "PageLayout",
+    element: <PageLayout />,
+    children: [
+      {
+        path: "/bank-details",
+        id: "bankDetails",
+        name: "bank-details",
+        element: <BankDetails />,
+        children: false,
+      },
+      {
+        path: "/notification-history",
+        id: "notificationHistory",
+        name: "notification-history",
+        element: <NotificationHistory />,
         children: false,
       },
     ],
@@ -39,6 +63,13 @@ const router = createBrowserRouter([
     id: "style-sheet",
     name: "style-sheet",
     element: <StyleSheets />,
+    children: false,
+  },
+  {
+    path: "*",
+    id: "NotFound",
+    name: "Not-Found",
+    element: "Not Valid Link",
     children: false,
   },
 ]);
