@@ -24,20 +24,21 @@ export const SSHeader = ({ wallet, user, pageName }) => {
                   {Icons.user}
                 </button>
                 <h3 className="text-black font-medium whitespace-nowrap uppercase">
-                  <span className="font-semibold">samrat </span>satta
+                  <span className="font-semibold">samrat</span>satta
                 </h3>
               </div>
             )}
             {!user && (
               <div className="flex items-center justify-center gap-3">
                 {/* Icons */}
-                <button
+                <Link
+                  to="/"
                   className="text-primary min-w-8 w-full rotate-180"
                   onClick={() => setIsActive((current) => !current)}
                 >
                   {Icons.arrowRight}
-                </button>
-                <h4 className="text-black font-semibold whitespace-nowrap uppercase">
+                </Link>
+                <h4 className="text-black font-semibold whitespace-nowrap capitalize">
                   {pageName}
                 </h4>
               </div>

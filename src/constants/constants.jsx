@@ -133,3 +133,36 @@ export const asideBarList = [
     icons: Icons.arrowRight,
   },
 ];
+
+export const desawer = [
+  {
+    icons: Icons.diceTwo,
+    title: "Play Jodi",
+  },
+  {
+    icons: Icons.diceFour,
+    title: "Play harf",
+  },
+  {
+    icons: Icons.diceThree,
+    title: "Crossing",
+  },
+];
+
+export const gamesType = [
+  {
+    title: "Andar",
+  },
+  {
+    title: "Bahar",
+  },
+];
+
+export const people = [
+  { name: "Wade Cooper" },
+  { name: "Arlene Mccoy" },
+  { name: "Devon Webb" },
+  { name: "Tom Cook" },
+  { name: "Tanya Fox" },
+  { name: "Hellen Schmidt" },
+];

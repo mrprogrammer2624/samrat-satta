@@ -6,6 +6,11 @@ import Mpin from "../pages/Mpin";
 import PageLayout from "../layout/PageLayout";
 import BankDetails from "../pages/BankDetails";
 import NotificationHistory from "../pages/NotificationHistory";
+import Desawer from "../pages/Desawer";
+import MyBids from "../pages/MyBids";
+import Reference from "../pages/Reference";
+import AddCash from "../pages/AddCash";
+import MyBalance from "../pages/MyBalance/MyBalance";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +47,42 @@ const router = createBrowserRouter([
         element: <NotificationHistory />,
         children: false,
       },
+      {
+        path: "/desawer",
+        id: "desawer",
+        name: "Desawer",
+        element: <Desawer />,
+        children: false,
+      },
+      {
+        path: "/my-bids",
+        id: "myBids",
+        name: "my-buids",
+        element: <MyBids />,
+        children: false,
+      },
+      {
+        path: "/add-cash",
+        id: "AddCash",
+        name: "Add-Cash",
+        element: <AddCash />,
+        children: false,
+      },
+      {
+        path: "/my-balance",
+        id: "MyBalance",
+        name: "My-Balance",
+        element: <MyBalance />,
+        children: false,
+      },
     ],
+  },
+  {
+    path: "reference",
+    id: "reference",
+    name: "Reference",
+    element: <Reference />,
+    children: false,
   },
   {
     path: "mpin",
