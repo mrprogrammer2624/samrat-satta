@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { Container, SSButton } from "../";
 import { Icons } from "../../utils/";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { asideBarList } from "../../constants";
 
 export const SSHeader = ({ wallet, user, pageName }) => {
@@ -95,10 +95,10 @@ export const SSHeader = ({ wallet, user, pageName }) => {
                       key={index + item.title}
                       className="py-2 border-b border-black"
                     >
-                      <Link className="flex hover:bg-gray gap-3 items-center justify-start">
+                      <NavLink to={item.slug} className="flex hover:bg-gray gap-3 items-center justify-start">
                         <span className="flex max-w-8">{item.icons}</span>
                         <h4 className="flex font-medium">{item.title}</h4>
-                      </Link>
+                      </NavLink>
                     </li>
                   );
                 })}

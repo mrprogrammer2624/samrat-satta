@@ -18,21 +18,30 @@ const MyBalance = () => {
           <h6 className="text-gray-75 font-medium">Deposit Amount</h6>
           <h4 className="font-semibold">&#8377; 1000.00</h4>
         </div>
-        <div className="flex border-b border-gray-75 pb-3">
+        <div className="flex border-b items-center justify-between border-gray-75 pb-3">
           <div className="text-right flex flex-col justify-center items-start gap-1">
             <h6 className="text-gray-75 font-medium">Winnings</h6>
             <h4 className="font-semibold">&#8377; 1000.00</h4>
           </div>
           <div>
-            <SSButton></SSButton>
+            <SSButton
+              variant={"primary"}
+              className={
+                "bg-transparent border border-secondary  text-secondary hover:text-white"
+              }
+            >
+              WithDraw
+            </SSButton>
           </div>
         </div>
-        <div className="text-right flex flex-col justify-center border-b border-gray-75 pb-3 items-start gap-1">
+        <div className="text-right flex flex-col justify-center pb-3 items-start gap-1">
           <h6 className="text-gray-75 font-medium">Deposit Amount</h6>
           <h4 className="font-semibold">&#8377; 1000.00</h4>
         </div>
       </div>
-      <div></div>
+      <div className="mt-4">
+        <h3 className="font-medium">My Transition</h3>
+      </div>
     </Container>
   );
 };

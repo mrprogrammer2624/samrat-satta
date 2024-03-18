@@ -8,7 +8,11 @@ const Home = () => {
     <Container>
       <div className="flex flex-col gap-8 h-[calc(100dvh-60px-50px-24px-32px)] overflow-auto scrollbarNone py-4">
         <div>
-          <SSSwiper pagination={{ clickable: true }}>
+          <SSSwiper
+            pagination={{ clickable: true }}
+            autoplay={true}
+            grabCursor={true}
+          >
             {SwiperImg.map((item, index) => (
               <SwiperSlide
                 key={index}

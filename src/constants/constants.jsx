@@ -43,7 +43,7 @@ export const FooterContent = [
       </svg>
     ),
     name: "Funds",
-    url: "funds",
+    url: "add-cash",
   },
   {
     icons: (
@@ -56,7 +56,7 @@ export const FooterContent = [
       </svg>
     ),
     name: "PassBook",
-    url: "pass-book",
+    url: "bank-details",
   },
   {
     icons: (
@@ -75,62 +75,77 @@ export const FooterContent = [
 
 export const asideBarList = [
   {
+    slug: "notification-history",
+    title: "notificationHistory",
+    icons: Icons.arrowRight,
+  },
+  {
+    slug: "my-balance",
+    title: "MyBalance",
+    icons: Icons.arrowRight,
+  },
+  {
+    slug: "desawer",
+    title: "desawer",
+    icons: Icons.arrowRight,
+  },
+  {
+    slug: "jodi-desawer",
+    title: "jodiDesawer",
+    icons: Icons.arrowRight,
+  },
+  {
+    slug: "mpin",
+    title: "mpin",
+    icons: Icons.arrowRight,
+  },
+  {
+    slug: "login",
+    title: "login",
+    icons: Icons.arrowRight,
+  },
+  {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
   {
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
+    slug: "/",
     title: "Hello",
     icons: Icons.arrowRight,
   },
