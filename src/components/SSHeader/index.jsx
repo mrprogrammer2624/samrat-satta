@@ -1,42 +1,117 @@
+import clsx from "clsx";
 import { Container, SSButton } from "../";
+import { Icons } from "../../utils/";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { asideBarList } from "../../constants";
 
-export const SSHeader = () => {
+export const SSHeader = ({ wallet, user, pageName }) => {
+  const [isActive, setIsActive] = useState(false);
   return (
-    <header className="py-3">
-      <Container>
+    <header className="">
+      <Container className="relative py-3">
+        {/* Header Main */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center justify-center gap-3">
-            {/* Icons */}
-            <button className="text-primary min-w-8 w-full">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"></path>
-              </svg>
-            </button>
-            <h3 className="text-black font-medium whitespace-nowrap uppercase">
-              <span className="font-semibold">samrat </span>satta
-            </h3>
-          </div>
+          {/* Left Side Header */}
           <div>
-            <SSButton variant="primary" className="py-2 px-4">
-              0
-              <span className="bg-white p-1 text-primary rounded-md">
-                <svg
-                  width="18px"
-                  height="18px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
+            {user && (
+              <div className="flex items-center justify-center gap-3">
+                {/* Icons */}
+                <button
+                  className="text-primary min-w-8 w-full"
+                  onClick={() => setIsActive((current) => !current)}
                 >
-                  <path d="M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"></path>
-                </svg>
-              </span>
-            </SSButton>
+                  {Icons.user}
+                </button>
+                <h3 className="text-black font-medium whitespace-nowrap uppercase">
+                  <span className="font-semibold">samrat</span>satta
+                </h3>
+              </div>
+            )}
+            {!user && (
+              <div className="flex items-center justify-center gap-3">
+                {/* Icons */}
+                <Link
+                  to="/"
+                  className="text-primary min-w-8 w-full rotate-180"
+                  onClick={() => setIsActive((current) => !current)}
+                >
+                  {Icons.arrowRight}
+                </Link>
+                <h4 className="text-black font-semibold whitespace-nowrap capitalize">
+                  {pageName}
+                </h4>
+              </div>
+            )}
           </div>
+          {/* Right Side Header */}
+          {wallet && (
+            <div>
+              <SSButton variant="primary" className="py-2 px-4">
+                0
+                <span className="bg-white p-1 text-primary rounded-md">
+                  {Icons.plusWithCircle}
+                </span>
+              </SSButton>
+            </div>
+          )}
         </div>
+
+        {/* Aside Header */}
+        {user && (
+          <>
+            <div
+              className={clsx(
+                "min-h-dvh w-full fixed top-0 start-2/4 -translate-x-2/4 bg-[rgb(0_0_0_/_60%)] container transition-all ease-linear duration-300",
+                isActive === true
+                  ? "opacity-100 visible"
+                  : "opacity-0 invisible"
+              )}
+            ></div>
+            <div
+              className={clsx(
+                isActive === true
+                  ? "translate-x-0 opacity-1"
+                  : "-translate-x-full opacity-0",
+                "min-h-dvh bg-white absolute w-3/4 top-0 left-0 transition-all ease-linear duration-300 p-3 shadow-sm after:"
+              )}
+            >
+              <div className="flex gap-2 item-center justify-start border-gray-75 border-b-2 py-1">
+                <button onClick={() => setIsActive((current) => !current)}>
+                  {Icons.user}
+                </button>
+                <div className="flex justify-between items-center w-[-webkit-fill-available]">
+                  <div>
+                    <h4 className="font-medium">User</h4>
+                    <p className="text-primary">Edit Profile</p>
+                  </div>
+                  <Link className="">{Icons.arrowRight}</Link>
+                </div>
+              </div>
+              <ul className="h-[calc(100dvh-60px-50px-24px-32px)] overflow-auto flex flex-col gap-2 my-4 scrollbarNone">
+                {asideBarList.map((item, index) => {
+                  return (
+                    <li
+                      key={index + item.title}
+                      className="py-2 border-b border-black"
+                    >
+                      <NavLink to={item.slug} className="flex hover:bg-gray gap-3 items-center justify-start">
+                        <span className="flex max-w-8">{item.icons}</span>
+                        <h4 className="flex font-medium">{item.title}</h4>
+                      </NavLink>
+                    </li>
+                  );
+                })}
+              </ul>
+              <div className="mt-auto flex border-t-2 border-gray-75 py-3">
+                <Link className="flex items-center justify-start gap-3">
+                  <span>{Icons.plusWithCircle}</span>
+                  <h4 className="ont-medium">Logout</h4>
+                </Link>
+              </div>
+            </div>
+          </>
+        )}
       </Container>
     </header>
   );
