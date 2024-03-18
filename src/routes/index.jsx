@@ -11,6 +11,8 @@ import MyBids from "../pages/MyBids";
 import Reference from "../pages/Reference";
 import AddCash from "../pages/AddCash";
 import MyBalance from "../pages/MyBalance/MyBalance";
+import Home from "../pages/Home";
+import JodiDesawer from "../pages/JodiDesawer";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
         index: true,
         id: "",
         name: "",
-        element: "",
+        element: <Home />,
         children: false,
       },
     ],
@@ -73,6 +75,13 @@ const router = createBrowserRouter([
         id: "MyBalance",
         name: "My-Balance",
         element: <MyBalance />,
+        children: false,
+      },
+      {
+        path: "/jodi-desawer",
+        id: "jodiDesawer",
+        name: "Jodi-Desawer",
+        element: <JodiDesawer />,
         children: false,
       },
     ],

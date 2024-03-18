@@ -1,5 +1,11 @@
+import { Container, SSTab } from "../../components";
+
 const StyleSheets = () => {
-  return <div></div>;
+  return (
+    <Container>
+      <SSTab />
+    </Container>
+  );
 };
 
 export default StyleSheets;

@@ -22,14 +22,25 @@ export const SSInput = ({
           {label}
         </label>
       )}
-      <div className="d-flex items-center">
-        {Icons && { Icons }}
+      <div className="d-flex items-center relative">
+        {Icons && (
+          <span className="max-w-6 w-full absolute top-2/4 left-2 -translate-y-2/4">
+            {Icons}
+          </span>
+        )}
         <input
           placeholder={placeholder}
-          className={clsx(className, "input", {
-            ["input-primary"]: variant == "primary",
-            ["input-secondary"]: variant == "secondary",
-          })}
+          className={clsx(
+            className,
+            "input",
+            {
+              ["input-primary"]: variant == "primary",
+              ["input-secondary"]: variant == "secondary",
+            },
+            {
+              ["ps-11"]: Icons,
+            }
+          )}
           value={value}
           onKeyUp={handleChange}
           id={id}
