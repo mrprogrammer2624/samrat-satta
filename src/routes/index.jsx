@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       {
         path: "/my-bids",
         id: "myBids",
-        name: "my-buids",
+        name: "my-bids",
         element: <MyBids />,
         children: false,
       },
