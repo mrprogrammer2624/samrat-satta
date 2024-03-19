@@ -24,7 +24,7 @@ export const SSTab = ({ TabName, TabContent }) => {
         </Tab.List>
         <Tab.Panels className="mt-2">
           {TabContent?.map((posts, idx) => (
-            <Tab.Panel key={idx} className={clsx("rounded-xl bg-white p-3")}>
+            <Tab.Panel key={idx} className={clsx("rounded-xl p-3")}>
               {posts.component}
             </Tab.Panel>
           ))}

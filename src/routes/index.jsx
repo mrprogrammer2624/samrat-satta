@@ -12,6 +12,7 @@ import AddCash from "../pages/AddCash";
 import MyBalance from "../pages/MyBalance/MyBalance";
 import Home from "../pages/Home";
 import JodiDesawer from "../pages/JodiDesawer";
+import Reference from "../pages/Reference";
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,13 @@ const router = createBrowserRouter([
         id: "jodiDesawer",
         name: "Jodi-Desawer",
         element: <JodiDesawer />,
+        children: false,
+      },
+      {
+        path: "/reference",
+        id: "reference",
+        name: "Reference",
+        element: <Reference />,
         children: false,
       },
     ],

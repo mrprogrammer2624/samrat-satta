@@ -3,71 +3,32 @@
 
 import { Easy } from "../pages/JodiDesawer/Easy";
 import { Special } from "../pages/JodiDesawer/Special";
+import { ReferenceTab } from "../pages/Reference/ReferenceTab";
 import { Icons } from "../utils";
 
 export const FooterContent = [
   {
-    icons: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M13 12V20H11V12H4L12 4L20 12H13Z"></path>
-      </svg>
-    ),
+    icons: Icons.home,
     name: "Home",
     url: "/",
   },
   {
-    icons: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M13 12V20H11V12H4L12 4L20 12H13Z"></path>
-      </svg>
-    ),
+    icons: Icons.bid,
     name: "My Bids",
     url: "my-bids",
   },
   {
-    icons: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M13 12V20H11V12H4L12 4L20 12H13Z"></path>
-      </svg>
-    ),
+    icons: Icons.funds,
     name: "Funds",
     url: "add-cash",
   },
   {
-    icons: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M13 12V20H11V12H4L12 4L20 12H13Z"></path>
-      </svg>
-    ),
+    icons: Icons.wallet,
     name: "PassBook",
     url: "bank-details",
   },
   {
-    icons: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-      >
-        <path d="M13 12V20H11V12H4L12 4L20 12H13Z"></path>
-      </svg>
-    ),
+    icons: Icons.chat,
     name: "Live Chat",
     url: "live-chat",
   },
@@ -225,5 +186,22 @@ export const tbodySpecial = [
     No: "1",
     Amount: "1",
     GameType: "1",
+  },
+];
+export const reference = [
+  {
+    name: "Reference",
+  },
+  {
+    name: "Earning",
+  },
+];
+
+export const referenceComponents = [
+  {
+    component: <ReferenceTab />,
+  },
+  {
+    component: "",
   },
 ];
