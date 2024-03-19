@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 
-* {
-  /* background-color: black; */
+body {
+  background-color: rgba(128, 128, 128, 0.050);
 }
 
 @layer components {

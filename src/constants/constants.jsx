@@ -104,51 +104,6 @@ export const asideBarList = [
     title: "login",
     icons: Icons.arrowRight,
   },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
-  {
-    slug: "/",
-    title: "Hello",
-    icons: Icons.arrowRight,
-  },
 ];
 
 export const desawer = [

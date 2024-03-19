@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { Container, SSButton } from "../../components";
 
 const MyBalance = () => {
+  let Navigate = useNavigate();
   return (
     <Container>
       <div className="bg-white shadow-xl p-2 flex-col flex gap-3">
@@ -10,6 +12,7 @@ const MyBalance = () => {
           <SSButton
             className="w-fit py-3 px-4 bg-secondary"
             variant={"primary"}
+            handelChange={() => Navigate("/add-cash")}
           >
             Add Cash
           </SSButton>
@@ -26,6 +29,7 @@ const MyBalance = () => {
           <div>
             <SSButton
               variant={"primary"}
+              handelChange={() => Navigate("/add-cash")}
               className={
                 "bg-transparent border border-secondary  text-secondary hover:text-white"
               }

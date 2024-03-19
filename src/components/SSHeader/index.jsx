@@ -2,11 +2,12 @@ import clsx from "clsx";
 import { Container, SSButton } from "../";
 import { Icons } from "../../utils/";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { asideBarList } from "../../constants";
 
 export const SSHeader = ({ wallet, user, pageName }) => {
   const [isActive, setIsActive] = useState(false);
+  const navigate = useNavigate();
   return (
     <header className="">
       <Container className="relative py-3">
@@ -47,7 +48,11 @@ export const SSHeader = ({ wallet, user, pageName }) => {
           {/* Right Side Header */}
           {wallet && (
             <div>
-              <SSButton variant="primary" className="py-2 px-4">
+              <SSButton
+                handelChange={() => navigate("/add-cash")}
+                variant="primary"
+                className="py-2 px-4"
+              >
                 0
                 <span className="bg-white p-1 text-primary rounded-md">
                   {Icons.plusWithCircle}
@@ -95,7 +100,10 @@ export const SSHeader = ({ wallet, user, pageName }) => {
                       key={index + item.title}
                       className="py-2 border-b border-black"
                     >
-                      <NavLink to={item.slug} className="flex hover:bg-gray gap-3 items-center justify-start">
+                      <NavLink
+                        to={item.slug}
+                        className="flex hover:bg-gray gap-3 items-center justify-start"
+                      >
                         <span className="flex max-w-8">{item.icons}</span>
                         <h4 className="flex font-medium">{item.title}</h4>
                       </NavLink>

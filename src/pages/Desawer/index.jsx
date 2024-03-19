@@ -30,7 +30,11 @@ const Desawer = () => {
       >
         <div className="grid grid-cols-2 gap-4 text-center items-center justify-between">
           {gamesType.map((game, index) => (
-            <Link key={index + game.title} className="bg-white shadow-lg rounded-2xl py-3">
+            <Link
+              to={"/jodi-desawer"}
+              key={index + game.title}
+              className="bg-white shadow-lg rounded-2xl py-3"
+            >
               <h3>{game.title}</h3>
             </Link>
           ))}

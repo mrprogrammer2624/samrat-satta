@@ -36,10 +36,10 @@ const Login = () => {
               <SSButton variant="primary">Continue</SSButton>
             </div>
             <div className="flex flex-col gap-4 text-center">
-              <Link to="/" className="font-bold h4 link-primary">
+              <Link to="/login" className="font-bold h4 link-primary">
                 I&apos;m new user, Sign Up
               </Link>
-              <Link to="/" className="font-bold h4 link-primary">
+              <Link to="/mpin" className="font-bold h4 link-primary">
                 Forgot Password ?
               </Link>
             </div>

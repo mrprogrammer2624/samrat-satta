@@ -2,8 +2,10 @@ import { SwiperSlide } from "swiper/react";
 import { Container, SSButton, SSSwiper } from "../../components";
 import { SwiperImg, gamesDetails } from "../../constants";
 import { SSGameCard } from "../../components/SSGameCard";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  let changePath = useNavigate();
   return (
     <Container>
       <div className="flex flex-col gap-8 h-[calc(100dvh-60px-50px-24px-32px)] overflow-auto scrollbarNone py-4">
@@ -29,11 +31,14 @@ const Home = () => {
             ))}
           </SSSwiper>
         </div>
-        <div>
-          <SSButton rounded variant={"primary"}>
-            Play Game
-          </SSButton>
-        </div>
+        <SSButton
+          rounded
+          variant={"primary"}
+          id={"Hello"}
+          handelChange={() => changePath("/jodi-desawer")}
+        >
+          Play Game
+        </SSButton>
         <div className="flex flex-col gap-4 p-2">
           {gamesDetails.map((game, index) => (
             <SSGameCard

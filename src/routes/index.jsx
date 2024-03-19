@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        id: "",
+        id: "test",
         name: "",
         element: <Home />,
         children: false,
